@@ -1,0 +1,42 @@
+/* ===== Admin submissions viewer (/admin) ===== */
+.ad{position:relative;max-width:880px;margin:0 auto;padding:64px 28px 80px;display:flex;flex-direction:column;gap:28px}
+.ad-head h1{margin:0;font-family:var(--font-display);font-weight:600;font-size:clamp(48px,7vw,72px);line-height:.95;color:var(--bone-50);text-shadow:var(--glow-text-bone)}
+.ad-count{margin:10px 0 0;font-family:var(--font-typewriter);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-3)}
+.ad-empty{font-size:19px;font-style:italic;color:var(--fg-3)}
+
+.ad-card{padding:28px 32px 32px;display:flex;flex-direction:column;gap:18px}
+.ad-card__top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.ad-card h2{margin:0;font-family:var(--font-display);font-weight:600;font-size:34px;line-height:1.05;color:var(--bone-50)}
+.ad-meta{margin:6px 0 0;font-size:15px;color:var(--fg-3)}
+.ad-tags{display:flex;gap:8px;flex-wrap:wrap}
+.ad-tag{font-family:var(--font-typewriter);font-size:12px;letter-spacing:.08em;text-transform:uppercase;padding:5px 9px;border-radius:6px;border:1px solid var(--line-ghost)}
+.ad-tag--on{color:var(--slime-400);border-color:rgba(168,214,94,.35)}
+.ad-tag--off{color:var(--bone-500)}
+.ad-tag--anon{color:var(--ghoul-300);border-color:rgba(227,138,182,.35)}
+
+.ad-facts{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px 24px}
+.ad-facts dt{font-family:var(--font-typewriter);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg-3)}
+.ad-facts dd{margin:3px 0 0;font-size:16px;color:var(--fg-1);overflow-wrap:anywhere}
+.ad-mono{font-family:var(--font-typewriter);font-size:13px;color:var(--fg-3)}
+
+.ad-audio{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--night-950);border:1px solid var(--line-ghost);border-radius:12px;padding:14px 16px}
+.ad-audio audio{flex:1;min-width:220px;height:40px;color-scheme:dark}
+.ad-story{white-space:pre-wrap;font-size:17px;line-height:1.6;color:var(--fg-2);background:var(--night-950);border:1px solid var(--line-ghost);border-radius:12px;padding:18px 20px;max-height:420px;overflow:auto}
+
+.ad-notice{margin:0;display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid rgba(168,214,94,.35);background:rgba(168,214,94,.08);color:var(--slime-300);font-size:16px}
+.ad-id{font-family:var(--font-typewriter);font-size:13px;letter-spacing:.08em;color:var(--bone-100)}
+
+/* Two-step delete: open the disclosure, then confirm. */
+.ad-delete{align-self:flex-start}
+.ad-delete summary{display:inline-flex;align-items:center;gap:6px;cursor:pointer;list-style:none;font-family:var(--font-typewriter);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3)}
+.ad-delete summary::-webkit-details-marker{display:none}
+.ad-delete summary:hover,.ad-delete[open] summary{color:#F08A82}
+.ad-delete form{margin-top:12px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 16px;border-radius:12px;border:1px solid rgba(210,82,74,.45);background:rgba(210,82,74,.08)}
+.ad-delete p{margin:0;font-size:16px;color:var(--fg-1)}
+.ad-btn-danger{background:var(--blood-500);color:var(--bone-50)}
+.ad-btn-danger:hover{box-shadow:var(--shadow-md),0 0 24px rgba(210,82,74,.45)}
+
+@media (max-width:560px){
+  .ad{padding:40px 16px 64px}
+  .ad-card{padding:22px 18px 24px}
+}

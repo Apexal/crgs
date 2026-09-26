@@ -1,0 +1,15 @@
+{
+  "name": "crgs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler d1 migrations apply crgs --local && wrangler dev",
+    "db:migrate:local": "wrangler d1 migrations apply crgs --local",
+    "db:migrate:remote": "wrangler d1 migrations apply crgs --remote",
+    "submissions:local": "wrangler d1 execute crgs --local --command \"SELECT id, created_at, town, who, credit_line, length(story) AS story_chars, audio_key, publish_ok, voice_ok, contact_ok FROM submissions ORDER BY created_at DESC LIMIT 20\"",
+    "deploy": "wrangler d1 migrations apply crgs --remote && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.141.0"
+  }
+}

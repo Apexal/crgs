@@ -1,0 +1,33 @@
+:root{
+--ease-boing:cubic-bezier(.34,1.3,.64,1);/* @kind other */
+--ease-spook:cubic-bezier(.6,-0.25,.3,1.25);/* @kind other */
+--ease-float:cubic-bezier(.45,.05,.55,.95);/* @kind other */
+--ease-out:cubic-bezier(.2,.8,.2,1);/* @kind other */
+--dur-snap:120ms;/* @kind other */--dur-quick:220ms;/* @kind other */--dur-base:360ms;/* @kind other */--dur-slow:700ms;/* @kind other */--dur-drift:6s;/* @kind other */
+}
+@keyframes w9-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes w9-wobble{0%,100%{transform:translateX(0)}25%{transform:translateX(-3px)}50%{transform:translateX(3px)}75%{transform:translateX(-1px)}}
+@keyframes w9-jitter{0%,100%{transform:translate(0,0)}25%{transform:translate(-1px,1px)}50%{transform:translate(1px,-1px)}75%{transform:translate(-1px,-1px)}}
+@keyframes w9-flicker{0%,19%,21%,23%,55%,57%,100%{opacity:1}20%,22%,56%{opacity:.35}}
+@keyframes w9-beam{0%,100%{opacity:.55;transform:scaleX(.9)}50%{opacity:.95;transform:scaleX(1.05)}}
+@keyframes w9-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes w9-spin{to{transform:rotate(360deg)}}
+@keyframes w9-drip{0%{transform:scaleY(0);transform-origin:top}100%{transform:scaleY(1);transform-origin:top}}
+@keyframes w9-pop-in{0%{transform:translateY(16px) scale(.97);opacity:0;filter:blur(6px)}100%{transform:none;opacity:1;filter:none}}
+@keyframes w9-fog{0%{background-position:0 0}100%{background-position:600px 0}}
+@keyframes w9-twinkle{0%,100%{opacity:.15}50%{opacity:.65}}
+@keyframes w9-twinkle-strong{0%,100%{opacity:0}45%{opacity:1}55%{opacity:1}}
+@keyframes w9-wander{0%{transform:translate(-15vw,62vh)}18%{transform:translate(22vw,18vh)}36%{transform:translate(58vw,58vh)}52%{transform:translate(88vw,12vh)}70%{transform:translate(64vw,78vh)}86%{transform:translate(20vw,44vh)}100%{transform:translate(-15vw,62vh)}}
+@keyframes w9-lurk{0%{transform:translate(calc(-10vw - 220px),60vh)}22%{transform:translate(calc(-10vw - 220px),25vh)}28%{transform:translate(14vw,32vh)}34%{transform:translate(calc(-10vw - 220px),12vh)}50%{transform:translate(calc(110vw + 40px),75vh)}58%{transform:translate(72vw,58vh)}66%{transform:translate(calc(110vw + 40px),30vh)}82%{transform:translate(45vw,calc(110vh + 40px))}100%{transform:translate(calc(-10vw - 220px),60vh)}}
+@keyframes w9-bob{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-22px) rotate(5deg)}}
+@keyframes w9-haunt{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes w9-eq{0%,100%{transform:scaleY(.25)}50%{transform:scaleY(1)}}
+@keyframes w9-boo{0%{transform:translateY(20px);opacity:0;filter:blur(4px)}100%{transform:none;opacity:1;filter:none}}
+.w9-float{animation:w9-float var(--dur-drift) var(--ease-float) infinite}
+.w9-flicker{animation:w9-flicker 3.2s linear infinite}
+.w9-haunt{animation:w9-haunt 4s var(--ease-float) infinite}
+.w9-twinkle{animation:w9-twinkle 7s var(--ease-float) infinite}
+.w9-hover-flicker:hover{animation:w9-flicker .9s linear}
+.w9-hover-wobble:hover{animation:w9-wobble .5s var(--ease-out)}
+.w9-hover-jitter:hover{animation:w9-jitter .12s linear infinite}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}

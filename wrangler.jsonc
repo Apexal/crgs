@@ -1,0 +1,66 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "crgs",
+	"main": "src/worker.js",
+	"compatibility_date": "2026-09-25",
+	"observability": {
+		"enabled": true
+	},
+	// Served only on the custom domain. The zone must be in the same Cloudflare account as this Worker.
+	"routes": [
+		{ "pattern": "stories.wednesdayatninepm.com", "custom_domain": true }
+	],
+	"workers_dev": false,
+	"preview_urls": false,
+	// TURNSTILE_SECRET is a secret (wrangler secret put). .dev.vars overrides these with Cloudflare's test keys locally.
+	"vars": {
+		"TURNSTILE_SITE_KEY": "0x4AAAAAAFD44jE-A0njeiuv",
+		"TURNSTILE_HOSTNAMES": "stories.wednesdayatninepm.com",
+		"NOTIFY_FROM": "stories@wednesdayatninepm.com",
+		"NOTIFY_TO": "thefrankmatranga@gmail.com"
+	},
+	// New-submission emails. Locked to the one inbox so the binding can't mail anyone else.
+	"send_email": [
+		{
+			"name": "NOTIFY",
+			"destination_address": "thefrankmatranga@gmail.com",
+			"allowed_sender_addresses": ["stories@wednesdayatninepm.com"]
+		}
+	],
+	// Per-IP cap on submissions: 5 a minute.
+	"ratelimits": [
+		{
+			"name": "SUBMIT_LIMITER",
+			"namespace_id": "1001",
+			"simple": { "limit": 5, "period": 60 }
+		}
+	],
+	// Static site in public/. The page, /api/* and /admin go to the Worker first; everything else is served as an asset.
+	"assets": {
+		"directory": "./public",
+		"binding": "ASSETS",
+		"run_worker_first": [
+			"/",
+			"/index.html",
+			"/api/*",
+			"/admin",
+			"/admin/*"
+		]
+	},
+	// Submitted voice recordings.
+	"r2_buckets": [
+		{
+			"binding": "AUDIO",
+			"bucket_name": "crgs-audio"
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "crgs",
+			"database_id": "c01b6a6d-7690-478e-a94e-3317ccea5df8",
+			"migrations_dir": "migrations"
+
+		}
+	]
+}

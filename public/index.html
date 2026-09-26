@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Share Your 518 Ghost Story</title>
+<meta name="description" content="Had a spooky experience in the 518? Record or type your story by Oct 24 for a Halloween podcast of Upstate NY tales.">
+<link rel="canonical" href="https://stories.wednesdayatninepm.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="518 Ghost Stories">
+<meta property="og:url" content="https://stories.wednesdayatninepm.com/">
+<meta property="og:title" content="Had a spooky experience in the 518?">
+<meta property="og:description" content="Record or type your strange Upstate NY story by Oct 24. The best ones make a Halloween podcast.">
+<meta property="og:image" content="https://stories.wednesdayatninepm.com/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Had a spooky experience in the 518? Record your story for a Halloween podcast of Upstate NY tales.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="turnstile-sitekey" content="">
+<link rel="icon" href="/assets/ghost.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script src="/js/collect.js" defer></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
+</head>
+<body>
+<div class="cp">
+  <div class="cp-stars"></div>
+  <div class="cp-twinkle cp-twinkle--1" aria-hidden="true"></div>
+  <div class="cp-twinkle cp-twinkle--2" aria-hidden="true"></div>
+  <div class="cp-twinkle cp-twinkle--3" aria-hidden="true"></div>
+  <div class="cp-ghost" aria-hidden="true"><img src="/assets/ghost.svg" alt=""></div>
+  <div class="cp-fog"></div>
+
+  <div id="form-view">
+    <section class="cp-hero">
+      <h1>Had a <span>spooky</span> experience in the 518?</h1>
+      <p class="cp-sub">Record it here in a few minutes. I'll turn the best ones into a Halloween podcast.</p>
+      <ul class="cp-facts">
+        <li><i class="ph-bold ph-eye"></i>Not just ghosts, anything strange</li>
+        <li><i class="ph-bold ph-microphone"></i>Record or type it</li>
+        <li><i class="ph-bold ph-mask-happy"></i>Anonymous is fine</li>
+        <li><i class="ph-bold ph-calendar-dots"></i>Send by Oct 24</li>
+      </ul>
+      <a class="w9-btn w9-btn--lg cp-jump" href="#record"><span class="w9-btn__icon"><i class="ph-fill ph-microphone"></i></span>Record your story</a>
+      <div class="cp-intro">
+        <a class="cp-host" href="https://www.linkedin.com/in/frank-matranga" target="_blank" rel="noopener">
+          <img src="/assets/frank.png" alt="Frank Matranga" width="128" height="128">
+          <span class="cp-host__text"><span class="cp-host__name">Frank Matranga</span><span class="cp-host__link"><i class="ph-bold ph-linkedin-logo"></i>LinkedIn</span></span>
+        </a>
+        <p>I'm collecting strange stories from around the Capital Region and Upstate NY: something that happened to you, or one you've heard. The finished episode goes up on <a href="https://www.linkedin.com/in/frank-matranga" target="_blank" rel="noopener">my LinkedIn</a> before Halloween.</p>
+      </div>
+    </section>
+
+    <form id="story-form" class="cp-main" novalidate>
+      <!-- 01 -->
+      <section class="cp-card" id="record">
+        <div class="cp-step"><span class="cp-step__num" style="color:var(--pumpkin-500)">01</span><h2>Tell me what happened</h2></div>
+        <p class="cp-lede">Talk like you're telling a friend. When was it, what did you see or hear, who else was there? 1–3 minutes is perfect (<span data-max-minutes>10</span> max).</p>
+        <div class="cp-rec">
+          <div class="cp-rec__btnwrap">
+            <div class="cp-rec__ring" id="rec-ring"></div>
+            <button type="button" class="cp-mic cp-mic--start" id="btn-start" aria-label="Start recording"><i class="ph-fill ph-microphone"></i></button>
+            <button type="button" class="cp-mic cp-mic--stop" id="btn-stop" aria-label="Stop recording" hidden><i class="ph-fill ph-stop"></i></button>
+            <button type="button" class="cp-mic cp-mic--play" id="btn-play" aria-label="Play" hidden><i class="ph-fill ph-play"></i></button>
+          </div>
+          <div class="cp-rec__body">
+            <div class="cp-rec__meta"><span class="cp-rec__status" id="rec-status" aria-live="polite">Tap the mic to start</span><span class="cp-rec__time" id="rec-time">00:00 / 10:00</span></div>
+            <div class="cp-wave" id="rec-wave" aria-hidden="true"></div>
+            <div class="cp-row" id="rerecord-row" hidden>
+              <button type="button" class="w9-btn w9-btn--ghost w9-btn--sm" id="btn-rerecord"><span class="w9-btn__icon"><i class="ph-bold ph-arrow-counter-clockwise"></i></span>Record again</button>
+            </div>
+            <p class="cp-note" id="mic-denied" hidden>Your browser won't let me use the mic. Check its permissions, or type your story in the box below.</p>
+          </div>
+        </div>
+        <div class="cp-typing">
+          <button type="button" class="cp-textlink" id="btn-toggle-text" aria-expanded="false" aria-controls="text-field">Can’t talk right now? Type it instead →</button>
+          <label class="w9-field" for="w9-story" id="text-field" hidden>
+            <span class="w9-field__label">Your story</span>
+            <span class="w9-input-wrap"><textarea id="w9-story" name="story" class="w9-input" rows="7" maxlength="20000" placeholder="It was October 2009, and my grandmother's dog would not go near the barn…"></textarea></span>
+          </label>
+        </div>
+      </section>
+
+      <!-- 02 -->
+      <section class="cp-card">
+        <div class="cp-step cp-step--spaced"><span class="cp-step__num" style="color:var(--slime-500)">02</span><h2>Where'd it happen?</h2></div>
+        <div class="cp-grid">
+          <label class="w9-field" for="w9-town">
+            <span class="w9-field__label">Town or nearest place (optional)</span>
+            <span class="w9-input-wrap"><i class="w9-input-wrap__icon ph-bold ph-map-pin"></i><input id="w9-town" name="town" class="w9-input w9-input--with-icon" placeholder="Menands" maxlength="120" autocomplete="address-level2"></span>
+            <span class="w9-field__hint">Saranac Lake, Cohoes, that one road near Lake George…</span>
+          </label>
+          <div class="cp-stack">
+            <span class="cp-eyebrow" id="who-label">Whose story is it?</span>
+            <div class="cp-stack" role="radiogroup" aria-labelledby="who-label">
+              <label class="w9-check w9-radio"><input type="radio" name="who" value="me" checked><span class="w9-check__box"><span class="w9-check__dot"></span></span><span>It happened to me</span></label>
+              <label class="w9-check w9-radio"><input type="radio" name="who" value="known"><span class="w9-check__box"><span class="w9-check__dot"></span></span><span>Someone I know</span></label>
+              <label class="w9-check w9-radio"><input type="radio" name="who" value="legend"><span class="w9-check__box"><span class="w9-check__dot"></span></span><span>It's a local legend</span></label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 -->
+      <section class="cp-card">
+        <div class="cp-step"><span class="cp-step__num" style="color:var(--ghoul-500)">03</span><h2>How should I credit you?</h2></div>
+        <p class="cp-lede">This is how I'll say it on air and in the show notes.</p>
+        <div class="cp-stack cp-stack--18">
+          <label class="w9-field" for="w9-credit" id="credit-field">
+            <span class="w9-field__label">Credit me as (optional)</span>
+            <span class="w9-input-wrap"><i class="w9-input-wrap__icon ph-bold ph-user"></i><input id="w9-credit" name="credit" class="w9-input w9-input--with-icon" placeholder="John from Menands" maxlength="120"></span>
+            <span class="w9-field__hint">Your name, a nickname, or something like “a local banker”</span>
+          </label>
+          <label class="w9-check"><input type="checkbox" name="anonymous" id="chk-anon"><span class="w9-check__box"><i class="ph-bold ph-check"></i></span><span>Keep me anonymous</span></label>
+          <div class="cp-onair">
+            <span class="cp-onair__label">On the show I'll say</span>
+            <span class="cp-onair__line">“This one comes from <strong data-credit-line>an anonymous local</strong>.”</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 -->
+      <section class="cp-card">
+        <div class="cp-step cp-step--spaced"><span class="cp-step__num" style="color:var(--cryptid-500)">04</span><h2>The fine print</h2></div>
+        <div class="cp-stack cp-stack--16">
+          <label class="w9-check"><input type="checkbox" name="publish_ok" id="chk-pub"><span class="w9-check__box"><i class="ph-bold ph-check"></i></span><span>Yes, you can share <span id="pub-who">my story</span> on the podcast, in show notes and on social. (Required)</span></label>
+          <label class="w9-check"><input type="checkbox" name="voice_ok" id="chk-voice" checked><span class="w9-check__box"><i class="ph-bold ph-check"></i></span><span>You can play my actual recording. (If unchecked, I'll retell it in my own words.)</span></label>
+          <p class="cp-note cp-indent" id="voice-warning" hidden>Heads up: you asked to stay anonymous, but people who know you may recognize your voice. Uncheck the box above and I'll retell it instead.</p>
+          <label class="w9-check"><input type="checkbox" name="contact_ok" id="chk-contact"><span class="w9-check__box"><i class="ph-bold ph-check"></i></span><span>You can contact me with follow-up questions.</span></label>
+          <div class="cp-contact" id="contact-field" hidden>
+            <label class="w9-field" for="w9-contact">
+              <span class="w9-field__label">Email or phone</span>
+              <span class="w9-input-wrap"><i class="w9-input-wrap__icon ph-bold ph-envelope-simple"></i><input id="w9-contact" name="contact" class="w9-input w9-input--with-icon" placeholder="you@example.com" maxlength="200" autocomplete="email"></span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <div class="cp-submit">
+        <button type="submit" class="w9-btn w9-btn--lg" id="btn-submit"><span class="w9-btn__icon"><i class="ph-bold ph-paper-plane-tilt"></i></span><span id="submit-label">Send my story</span></button>
+        <div class="cp-progress" id="upload-progress" role="progressbar" aria-label="Upload progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" hidden>
+          <div class="cp-progress__track"><div class="cp-progress__fill" id="upload-fill"></div></div>
+          <span class="cp-progress__label" id="upload-label" aria-live="polite">Uploading… 0%</span>
+        </div>
+        <div class="cp-turnstile" id="turnstile-widget"></div>
+        <p class="cp-error" id="form-error" role="alert" hidden></p>
+        <p class="cp-required">Only two things are required: your story and the permission box. Send by <strong>Oct 24</strong>.</p>
+        <p class="cp-fineprint">Our crack team of investigators (just kidding, it's just me) listens to every submission. I'll never share your contact info. Changed your mind later? Email <a href="mailto:thefrankmatranga@gmail.com?subject=Please%20remove%20my%20518%20story">thefrankmatranga@gmail.com</a> and I'll delete your story and recording.</p>
+        <p class="cp-inspo">Inspired by <a href="https://jimharold.com/category/jim-harolds-campfire/" target="_blank" rel="noopener">Jim Harold's Campfire</a>.</p>
+      </div>
+    </form>
+  </div>
+
+  <main class="cp-done" id="done-view" hidden>
+    <span class="w9-sticker w9-sticker--float" role="img" aria-label="ufo" style="color:var(--slime-500);font-size:96px;animation-delay:-5s"><i class="ph-fill ph-flying-saucer"></i></span>
+    <h1 tabindex="-1">Got it. Beamed up.</h1>
+    <p>Thanks, <span data-credit-line>an anonymous local</span>. I'll give it a listen with the lights off. If it makes the show, you'll hear it credited exactly that way.</p>
+    <p class="cp-ref">Your reference: <strong id="ref-id"></strong>. To change or remove your story, <a id="ref-mail" href="mailto:thefrankmatranga@gmail.com">email me</a> with that code.</p>
+    <p>The episode goes up on <a href="https://www.linkedin.com/in/frank-matranga" target="_blank" rel="noopener">my LinkedIn</a> before Halloween. Follow along so you don't miss it.</p>
+    <div class="cp-row cp-row--center">
+      <button type="button" class="w9-btn" id="btn-share"><span class="w9-btn__icon"><i class="ph-bold ph-share-fat"></i></span><span id="share-label">Send this to a friend with a story</span></button>
+      <button type="button" class="w9-btn w9-btn--secondary" id="btn-reset"><span class="w9-btn__icon"><i class="ph-bold ph-plus"></i></span>Tell me another</button>
+    </div>
+  </main>
+</div>
+</body>
+</html>

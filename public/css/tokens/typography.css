@@ -1,0 +1,24 @@
+:root{
+--font-display:'Grenze Gotisch','UnifrakturMaguntia',Georgia,serif;
+--font-drip:var(--font-display);/* deprecated alias — accent words use display + slime glow */
+--font-body:'Spectral',Georgia,serif;
+--font-typewriter:'IBM Plex Mono',ui-monospace,monospace;
+--font-scrawl:var(--font-body);/* deprecated alias — asides use body italic */
+
+--fs-mega:clamp(64px,9vw,128px);/* @kind font */
+--fs-display:clamp(48px,6vw,80px);/* @kind font */
+--fs-h1:48px;/* @kind font */--fs-h2:36px;/* @kind font */--fs-h3:26px;/* @kind font */--fs-h4:20px;/* @kind font */
+--fs-body-lg:19px;/* @kind font */--fs-body:16px;/* @kind font */--fs-small:14px;/* @kind font */--fs-micro:12px;/* @kind font */
+
+--lh-tight:1;/* @kind font */--lh-snug:1.15;/* @kind font */--lh-body:1.55;/* @kind font */
+--ls-display:-0.01em;/* @kind font */--ls-label:0.12em;/* @kind font */
+
+--fw-regular:400;/* @kind font */--fw-medium:500;/* @kind font */--fw-bold:600;/* @kind font */--fw-black:700;/* @kind font */
+
+/* Semantic */
+--text-display-font:var(--font-display);/* @kind other */
+--text-heading-font:var(--font-display);/* @kind other */
+--text-body-font:var(--font-body);/* @kind other */
+--text-label-font:var(--font-typewriter);/* @kind other */
+--text-annotation-font:var(--font-scrawl);/* @kind other */
+}

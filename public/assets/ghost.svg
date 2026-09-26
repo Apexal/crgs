@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 250" width="200" height="250">
+<defs>
+<radialGradient id="gBody" cx="46%" cy="28%" r="78%"><stop offset="0" stop-color="#F4F7EE" stop-opacity=".9"></stop><stop offset=".4" stop-color="#D7E2DA" stop-opacity=".5"></stop><stop offset="1" stop-color="#8FA8A2" stop-opacity=".06"></stop></radialGradient>
+<linearGradient id="gFade" x1="0" y1="0" x2="0" y2="1"><stop offset=".45" stop-color="#fff"></stop><stop offset="1" stop-color="#fff" stop-opacity="0"></stop></linearGradient>
+<mask id="gMask"><rect width="200" height="250" fill="url(#gFade)"></rect></mask>
+<filter id="gGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"></feGaussianBlur></filter>
+<filter id="gSoft"><feGaussianBlur stdDeviation="2"></feGaussianBlur></filter>
+<filter id="gWarp" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".018 .045" numOctaves="2" seed="4"></feTurbulence><feDisplacementMap in="SourceGraphic" scale="7"></feDisplacementMap></filter>
+</defs>
+<g filter="url(#gWarp)">
+<g mask="url(#gMask)">
+<path fill="#6CC7BA" opacity=".3" filter="url(#gGlow)" d="M100 10C142 10 164 50 166 98C168 132 176 150 190 168C174 170 166 164 160 158C162 186 156 212 146 236C138 214 130 204 122 222C116 236 108 244 100 228C92 212 84 214 78 232C72 244 62 238 58 222C52 206 46 194 40 186C34 196 22 200 8 196C24 178 32 152 34 120C36 64 58 10 100 10Z"></path>
+<path fill="url(#gBody)" d="M100 10C142 10 164 50 166 98C168 132 176 150 190 168C174 170 166 164 160 158C162 186 156 212 146 236C138 214 130 204 122 222C116 236 108 244 100 228C92 212 84 214 78 232C72 244 62 238 58 222C52 206 46 194 40 186C34 196 22 200 8 196C24 178 32 152 34 120C36 64 58 10 100 10Z"></path>
+<path fill="none" stroke="#F4F7EE" stroke-opacity=".3" stroke-width="1" d="M100 10C142 10 164 50 166 98C168 132 176 150 190 168C174 170 166 164 160 158C162 186 156 212 146 236C138 214 130 204 122 222C116 236 108 244 100 228C92 212 84 214 78 232C72 244 62 238 58 222C52 206 46 194 40 186C34 196 22 200 8 196C24 178 32 152 34 120C36 64 58 10 100 10Z"></path>
+<g fill="none" stroke="#F4F7EE" stroke-opacity=".22" stroke-width="1.4" stroke-linecap="round">
+<path d="M70 150C66 176 72 198 64 222"></path>
+<path d="M132 146C136 172 128 196 136 218"></path>
+<path d="M102 196C98 210 104 220 100 234"></path>
+</g>
+</g>
+<path d="M62 84C70 76 86 78 92 90C90 104 80 116 70 114C62 108 58 96 62 84Z" fill="#0A070F" opacity=".88"></path>
+<path d="M138 84C130 76 114 78 108 90C110 104 120 116 130 114C138 108 142 96 138 84Z" fill="#0A070F" opacity=".88"></path>
+<path fill="#0A070F" opacity=".8" d="M88 132C92 128 108 128 112 132C116 150 112 176 100 184C88 176 84 150 88 132Z"></path>
+</g>
+</svg>

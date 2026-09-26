@@ -1,0 +1,16 @@
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg-page);color:var(--fg-1);font-family:var(--font-body);font-size:var(--fs-body);line-height:var(--lh-body);-webkit-font-smoothing:antialiased}
+a{color:var(--link);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px;transition:color var(--dur-quick)}
+a:hover{color:var(--link-hover);text-shadow:0 0 14px rgba(240,214,115,.45)}
+::selection{background:var(--slime-500);color:var(--night-950)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:3px}
+.w9-display{font-family:var(--font-display);line-height:var(--lh-tight);letter-spacing:var(--ls-display);font-weight:600}
+.w9-drip{font-family:var(--font-display);font-weight:600;color:var(--slime-500);text-shadow:var(--glow-text-slime)}
+.w9-label{font-family:var(--font-typewriter);font-size:var(--fs-small);letter-spacing:var(--ls-label);text-transform:uppercase}
+.w9-scrawl{font-family:var(--font-body);font-style:italic}
+.w9-grain{position:relative}
+.w9-grain::after{content:"";position:absolute;inset:0;background-image:var(--tex-grain);opacity:.18;mix-blend-mode:overlay;pointer-events:none;border-radius:inherit}
+.w9-halftone{background-image:var(--tex-halftone);background-size:var(--tex-halftone-size)}
+.w9-fog{background-image:var(--tex-fog)}
+.w9-vignette{position:relative}.w9-vignette::before{content:"";position:absolute;inset:0;background:var(--tex-vignette);pointer-events:none;border-radius:inherit}
+.w9-stars{background-image:var(--tex-stars);background-size:var(--tex-stars-size)}
