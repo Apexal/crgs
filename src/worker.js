@@ -168,9 +168,9 @@ async function notify(env, request, s) {
   ].filter((l) => l !== null);
   try {
     await env.NOTIFY.send({
-      from: { email: env.NOTIFY_FROM, name: '518 Ghost Stories' },
+      from: { email: env.NOTIFY_FROM, name: 'Upstate NY Ghost Stories' },
       to: env.NOTIFY_TO,
-      subject: `New 518 story${s.town ? ` from ${s.town}` : ''}${s.hasAudio ? ' 🎙️' : ''}`,
+      subject: `New Upstate NY story${s.town ? ` from ${s.town}` : ''}${s.hasAudio ? ' 🎙️' : ''}`,
       text: lines.join('\n'),
     });
   } catch (err) {

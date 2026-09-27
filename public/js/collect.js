@@ -218,7 +218,7 @@
     const url = location.origin + '/';
     try {
       if (navigator.share) {
-        await navigator.share({ title: document.title, text: 'Got a spooky 518 story? Record it for a Halloween podcast.', url });
+        await navigator.share({ title: document.title, text: 'Got a spooky Upstate NY story? Record it for a Halloween podcast.', url });
         return;
       }
       await navigator.clipboard.writeText(url);
@@ -369,7 +369,7 @@
       state.submitted = true;
       const ref = String(id || state.submissionId).slice(0, 8).toUpperCase();
       els.refId.textContent = ref;
-      els.refMail.href = 'mailto:thefrankmatranga@gmail.com?subject=' + encodeURIComponent('My 518 story (ref ' + ref + ')');
+      els.refMail.href = 'mailto:thefrankmatranga@gmail.com?subject=' + encodeURIComponent('My Upstate NY story (ref ' + ref + ')');
       renderCredit();
       els.formView.hidden = true;
       els.doneView.hidden = false;

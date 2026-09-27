@@ -1,4 +1,4 @@
-# 518 ghost story collector
+# Upstate NY ghost story collector
 
 A one-page site where listeners record (or type) a spooky Upstate NY story. It runs as a single Cloudflare Worker:
 

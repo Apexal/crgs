@@ -102,7 +102,7 @@ async function listPage(env, url) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Submissions · 518 Ghost Stories</title>
+<title>Submissions · Upstate NY Ghost Stories</title>
 <link rel="icon" href="/assets/ghost.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
@@ -141,7 +141,7 @@ function card(r) {
   return `<article class="cp-card ad-card" id="s-${esc(r.id)}">
       <div class="ad-card__top">
         <div>
-          <h2>${esc(r.town || 'Somewhere in the 518')}</h2>
+          <h2>${esc(r.town || 'Somewhere in Upstate NY')}</h2>
           <p class="ad-meta">${esc(when)} · ${esc(WHO_LABEL[r.who] || r.who)}</p>
         </div>
         <div class="ad-tags">${flags}</div>

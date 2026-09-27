@@ -17,7 +17,8 @@ body{background:var(--night-900)}
 /* Hero */
 .cp-hero{position:relative;max-width:880px;margin:0 auto;padding:80px 28px 24px}
 .cp-hero h1{margin:0;max-width:640px;font-family:var(--font-display);font-weight:600;font-size:clamp(56px,8vw,96px);line-height:.95;letter-spacing:0;color:var(--bone-50);text-shadow:var(--glow-text-bone);text-wrap:balance}
-.cp-hero h1 span{color:var(--slime-500);text-shadow:var(--glow-text-slime)}
+.cp-hero h1 span{display:inline-block;color:var(--slime-500);text-shadow:var(--glow-text-slime);animation:cp-spooky-flicker 5.5s steps(1,end) infinite}
+@keyframes cp-spooky-flicker{0%,100%{opacity:1;text-shadow:var(--glow-text-slime);transform:none}8%{opacity:.25;text-shadow:none}9%{opacity:1;text-shadow:var(--glow-text-slime)}11%{opacity:.4;text-shadow:none;transform:translateX(-2px) skewX(-4deg)}12%{opacity:1;text-shadow:var(--glow-text-slime);transform:none}46%{opacity:.85}47%{opacity:.15;text-shadow:none}49%{opacity:.7;text-shadow:none;transform:translateX(1px)}50%{opacity:.1;text-shadow:none}53%{opacity:1;text-shadow:var(--glow-text-slime);transform:none}78%{opacity:.5;text-shadow:none}79%{opacity:1;text-shadow:var(--glow-text-slime)}}
 .cp-sub{margin:24px 0 0;max-width:640px;font-size:clamp(20px,2.4vw,24px);line-height:1.4;color:var(--bone-50);text-wrap:pretty}
 .cp-facts{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
 .cp-facts li{display:flex;align-items:center;gap:8px;padding:8px 14px;border:1px solid var(--line-ghost-strong);border-radius:999px;background:var(--night-800);font-family:var(--font-body);font-size:16px;font-style:italic;color:var(--bone-100)}
