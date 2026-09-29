@@ -14,3 +14,8 @@ a:hover{color:var(--link-hover);text-shadow:0 0 14px rgba(240,214,115,.45)}
 .w9-fog{background-image:var(--tex-fog)}
 .w9-vignette{position:relative}.w9-vignette::before{content:"";position:absolute;inset:0;background:var(--tex-vignette);pointer-events:none;border-radius:inherit}
 .w9-stars{background-image:var(--tex-stars);background-size:var(--tex-stars-size)}
+html{cursor:var(--cursor-default)}
+a[href],button,label,summary,select,[role=button],input:is([type=checkbox],[type=radio],[type=range],[type=button],[type=submit],[type=file]){cursor:var(--cursor-pointer)}
+input,textarea,[contenteditable]{cursor:var(--cursor-text)}
+:disabled,[aria-disabled=true]{cursor:var(--cursor-disabled)}
+[aria-busy=true]{cursor:var(--cursor-busy)}

@@ -28,7 +28,7 @@
 
 /* Two-step delete: open the disclosure, then confirm. */
 .ad-delete{align-self:flex-start}
-.ad-delete summary{display:inline-flex;align-items:center;gap:6px;cursor:pointer;list-style:none;font-family:var(--font-typewriter);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3)}
+.ad-delete summary{display:inline-flex;align-items:center;gap:6px;cursor:var(--cursor-pointer);list-style:none;font-family:var(--font-typewriter);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3)}
 .ad-delete summary::-webkit-details-marker{display:none}
 .ad-delete summary:hover,.ad-delete[open] summary{color:#F08A82}
 .ad-delete form{margin-top:12px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 16px;border-radius:12px;border:1px solid rgba(210,82,74,.45);background:rgba(210,82,74,.08)}

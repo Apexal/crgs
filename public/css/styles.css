@@ -3,6 +3,7 @@
 @import url('tokens/spacing.css');
 @import url('tokens/effects.css');
 @import url('tokens/motion.css');
+@import url('tokens/cursors.css');
 @import url('tokens/base.css');
 @import url('components.css');
 @import url('collect.css');
